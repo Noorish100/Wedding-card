@@ -58,14 +58,53 @@ body{
 /* Names */
 
 .groom, .bride {
-  font-family: 'Georgia', serif; /* classy serif */
-  font-size: 42px;
-  font-weight: bold;
-  color: #D4AF37; /* fallback gold */
-  background: linear-gradient(135deg, rgba(212,175,55,0.85), rgba(34,139,34,0.6)); /* gold to forest green */
+  font-family: 'Alex Brush', cursive;
+  font-size: 64px;
+  font-weight: normal;
+  background: linear-gradient(135deg, #FFD700, #32CD32); /* gold to bright green */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.3); /* soft depth */
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.35);
+  display: inline-block;
+  position: relative;
+  background-size: 400% 100%;
+  animation: shimmer 4s linear infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 0%; }
+  100% { background-position: 0% 0%; }
+}
+
+.heart {
+  font-size: 28px;
+  color: gold;
+  margin: 12px 0;
+}
+
+/* Subtle shimmer animation */
+@keyframes shimmer {
+  0% { background-position: 0% 0%; }
+  50% { background-position: 100% 0%; }
+  100% { background-position: 0% 0%; }
+}
+
+.heart {
+  font-size: 28px;
+  color: gold;
+  margin: 10px 0;
+}
+
+/* Optional shimmer animation */
+@keyframes shimmer {
+  0% { background-position: -200px 0; }
+  100% { background-position: 200px 0; }
+}
+
+.groom, .bride {
+  background-size: 400px 100%;
+  animation: shimmer 3s linear infinite;
 }
 .bride-info{
   font-size:14px;
