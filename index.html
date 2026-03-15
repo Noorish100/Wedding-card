@@ -56,15 +56,11 @@ body{
 }
 
 /* Names */
-.groom{
+.groom,.bride{
   font-family:'Great Vibes', cursive;
   font-size:42px;
   color:gold;
-}
-.bride{
-  font-family:'Great Vibes', cursive;
-  font-size:42px;
-  color:gold;
+  word-wrap: break-word; /* prevent overflow */
 }
 .bride-info{
   font-size:14px;
@@ -77,13 +73,15 @@ body{
   margin:8px 0;
 }
 
-/* Reception */
+/* Section Titles */
 .section-title{
   font-size:20px;
   color:gold;
   margin-top:15px;
   margin-bottom:5px;
 }
+
+/* Details */
 .details{
   font-size:16px;
   line-height:1.7;
@@ -91,6 +89,15 @@ body{
 .highlight{
   font-weight:600;
   color:#ffd700;
+}
+
+/* Divider Line */
+.divider{
+  width:60%;
+  height:1px;
+  background:linear-gradient(to right, transparent, gold, transparent);
+  margin:20px auto;
+  opacity:0.7;
 }
 
 /* Dua */
@@ -104,8 +111,7 @@ body{
 /* RSVP */
 .rsvp{
   margin-top:25px;
-  padding:20px;
-  border-top:1px solid gold;
+  padding-top:20px;
 }
 .rsvp h3{
   color:gold;
@@ -144,10 +150,13 @@ button{
     padding:25px;
   }
   .groom,.bride{
-    font-size:34px;
+    font-size:28px;
   }
   .bismillah{
     font-size:24px;
+  }
+  .heart{
+    font-size:18px;
   }
 }
 </style>
@@ -169,6 +178,8 @@ button{
   <div class="bride" id="bride">Sabira Farooq</div>
   <div class="bride-info" id="brideInfo">D/o Late Sheikh Farooq</div>
 
+  <div class="divider"></div>
+
   <div class="section-title" id="receptionTitle">Reception</div>
   <div class="details" id="receptionDetails">
     📅 <span class="highlight">5 June 2026</span><br>
@@ -176,24 +187,29 @@ button{
     📍 Alamganj <span class="highlight">JASHAN PALACE</span>, Patna
   </div>
 
-  <!-- Dua directly visible -->
+  <div class="divider"></div>
+
   <div class="dua" id="duaText">
     "Barakallahu laka wa baraka alaika wa jama'a bainakuma fi khair."
   </div>
 
+  <div class="divider"></div>
+
   <!-- RSVP -->
-<div class="rsvp">
-  <h3>RSVP</h3>
-  <div class="details" id="rsvpNames">
-    • <span class="highlight">Ms Sadaf Hayat</span><br>
-    • <span class="highlight">Ms Shaima Naaz</span><br>
-    • <span class="highlight">Mr & Mrs Sheikh Ahtisham</span><br>
-    • <span class="highlight">Mr & Mrs Omer Naik</span><br>
-    • <span class="highlight">Mr Mohammad Haleef</span><br>
-    • <span class="highlight">Ms Mizla Aizal</span><br>
-    • <span class="highlight">Mr Mohammad Mikail</span>
+  <div class="rsvp">
+    <h3>RSVP</h3>
+    <div class="details" id="rsvpNames">
+      • <span class="highlight">Ms Sadaf Hayat</span><br>
+      • <span class="highlight">Ms Shaima Naaz</span><br>
+      • <span class="highlight">Mr & Mrs Sheikh Ahtisham</span><br>
+      • <span class="highlight">Mr & Mrs Omer Naik</span><br>
+      • <span class="highlight">Mr Mohammad Haleef</span><br>
+      • <span class="highlight">Ms Mizla Aizal</span><br>
+      • <span class="highlight">Mr Mohammad Mikail</span>
+    </div>
   </div>
-</div>
+
+  <div class="divider"></div>
 
   <!-- Groom Address -->
   <div class="address" id="groomAddress">
