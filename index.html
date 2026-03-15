@@ -56,11 +56,16 @@ body{
 }
 
 /* Names */
-.groom,.bride{
-  font-family:'Great Vibes', cursive;
-  font-size:42px;
-  color:gold;
-  word-wrap: break-word; /* prevent overflow */
+
+.groom, .bride {
+  font-family: 'Georgia', serif; /* classy serif */
+  font-size: 42px;
+  font-weight: bold;
+  color: #D4AF37; /* fallback gold */
+  background: linear-gradient(135deg, rgba(212,175,55,0.85), rgba(34,139,34,0.6)); /* gold to forest green */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3); /* soft depth */
 }
 .bride-info{
   font-size:14px;
