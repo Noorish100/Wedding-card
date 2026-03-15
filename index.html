@@ -1,230 +1,237 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wedding Invitation</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wedding Reception Invitation</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        background: linear-gradient(135deg, #000, #111);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+        color: white;
+      }
 
-<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+      /* Card */
+      .card {
+        max-width: 720px;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        border: 2px solid gold;
+        border-radius: 18px;
+        padding: 40px;
+        text-align: center;
+        box-shadow: 0 0 25px rgba(255, 215, 0, 0.3);
+      }
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins', sans-serif;
-}
+      /* Bismillah */
+      .bismillah {
+        font-size: 30px;
+        color: gold;
+        margin-bottom: 15px;
+      }
 
-body{
-    background:black;
-    color:white;
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    padding:10px;
-}
+      /* Host */
+      .host {
+        font-size: 15px;
+        margin-bottom: 10px;
+        color: #f5e6a8;
+      }
 
-/* Thumbnail */
-.thumbnail{
-    text-align:center;
-}
+      /* Message */
+      .message {
+        font-size: 16px;
+        margin-bottom: 20px;
+        line-height: 1.6;
+      }
 
-.thumbnail h1{
-    font-family:'Great Vibes', cursive;
-    font-size:clamp(32px,6vw,42px);
-    color:gold;
-}
+      /* Names */
+      .groom {
+        font-family: "Great Vibes", cursive;
+        font-size: 42px;
+        color: gold;
+      }
+      .bride {
+        font-family: "Great Vibes", cursive;
+        font-size: 42px;
+        color: gold;
+      }
+      .bride-info {
+        font-size: 14px;
+        color: #e5d28c;
+        margin-bottom: 8px;
+      }
+      .heart {
+        font-size: 22px;
+        color: gold;
+        margin: 8px 0;
+      }
 
-.thumbnail button{
-    margin-top:20px;
-    padding:10px 28px;
-    background:gold;
-    border:none;
-    border-radius:30px;
-    font-weight:600;
-    cursor:pointer;
-}
+      /* Reception */
+      .section-title {
+        font-size: 20px;
+        color: gold;
+        margin-top: 15px;
+        margin-bottom: 5px;
+      }
+      .details {
+        font-size: 16px;
+        line-height: 1.7;
+      }
+      .highlight {
+        font-weight: 600;
+        color: #ffd700;
+      }
 
-/* Card */
-.card{
-    display:none;
-    width:100%;
-    max-width:360px;
-    height:90vh;
-    background:linear-gradient(#0f0f0f,#000);
-    border:2px solid gold;
-    border-radius:25px;
-    padding:15px;
-    text-align:center;
-    position:relative;
-    overflow:hidden;
-}
+      /* Dua */
+      .dua {
+        margin-top: 20px;
+        font-size: 16px;
+        color: #f6e8a6;
+        line-height: 1.5;
+      }
 
-/* Floral Decoration */
-.card::before,
-.card::after{
-    content:"🌸";
-    position:absolute;
-    font-size:26px;
-    color:gold;
-    opacity:0.5;
-}
+      /* RSVP */
+      .rsvp {
+        margin-top: 25px;
+        padding: 20px;
+        border-top: 1px solid gold;
+      }
+      .rsvp h3 {
+        color: gold;
+        margin-bottom: 10px;
+      }
+      .rsvp .details {
+        font-size: 15px;
+      }
 
-.card::before{
-    top:6px;
-    left:8px;
-}
+      /* Buttons */
+      button {
+        margin-top: 20px;
+        padding: 9px 20px;
+        border: none;
+        border-radius: 25px;
+        background: gold;
+        color: black;
+        font-weight: 600;
+        cursor: pointer;
+      }
 
-.card::after{
-    bottom:6px;
-    right:8px;
-}
+      /* Mobile */
+      @media (max-width: 600px) {
+        .card {
+          padding: 25px;
+        }
+        .groom,
+        .bride {
+          font-size: 34px;
+        }
+        .bismillah {
+          font-size: 24px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card">
+      <div class="bismillah" id="bismillah">
+        بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
+      </div>
 
-.bismillah{
-    font-size:22px;
-    color:gold;
-    margin-top:5px;
-}
+      <div class="host" id="host">MR & Mrs MD Nauman</div>
 
-.title{
-    font-family:'Great Vibes', cursive;
-    font-size:32px;
-    color:gold;
-    margin:8px 0;
-}
+      <div class="message" id="message">
+        Cordially invite you to grace the auspicious occasion of the
+        <span class="highlight">Wedding Reception</span>
+      </div>
 
-.names{
-    margin:12px 0;
-}
+      <div class="groom" id="groom">MD Noorish Nauman</div>
+      <div class="heart">♥</div>
+      <div class="bride" id="bride">Sabira Farooq</div>
+      <div class="bride-info" id="brideInfo">D/o Late Farooq Ahmad Sheikh</div>
 
-.groom,.bride{
-    display:block;
-    font-family:'Great Vibes', cursive;
-    font-size:28px;
-    background:linear-gradient(45deg,#FFD700,#fff6a9,#FFD700);
-    -webkit-background-clip:text;
-    -webkit-text-fill-color:transparent;
-}
+      <div class="section-title" id="receptionTitle">Reception</div>
+      <div class="details" id="receptionDetails">
+        📅 <span class="highlight">5 June 2026</span><br />
+        🕖 <span class="highlight">7:00 PM</span><br />
+        📍 Alamganj <span class="highlight">JASHAN PALACE</span>, Patna
+      </div>
 
-.separator{
-    color:gold;
-    margin:4px 0;
-}
+      <!-- Dua directly visible -->
+      <div class="dua" id="duaText">
+        "Barakallahu laka wa baraka alaika wa jama'a bainakuma fi khair."
+      </div>
 
-.section-title{
-    margin-top:8px;
-    color:gold;
-    font-weight:600;
-    font-size:14px;
-}
+      <!-- RSVP -->
+      <div class="rsvp">
+        <h3>RSVP</h3>
+        <div class="details" id="rsvpNames">
+          • <span class="highlight">MR & Mrs Sheikh Ahtisham Farooq</span><br/>
+          • <span class="highlight">Sadaf Hayat</span><br />
+          • <span class="highlight">Shaima Naaz</span>
+        </div>
+      </div>
 
-.details{
-    font-size:12px;
-    margin-top:4px;
-    line-height:1.3;
-}
+      <!-- Language toggle -->
+      <button onclick="toggleLanguage()">اردو / English</button>
+    </div>
 
-.countdown{
-    margin-top:8px;
-    font-size:12.5px;
-    color:#ffd700;
-}
+    <script>
+      let isUrdu = false;
 
-button.small{
-    margin-top:8px;
-    padding:6px 14px;
-    font-size:12.5px;
-    background:gold;
-    border:none;
-    border-radius:18px;
-    cursor:pointer;
-}
+      function toggleLanguage() {
+        isUrdu = !isUrdu;
 
-.dua{
-    display:none;
-    margin-top:6px;
-    font-size:12px;
-    color:#ffd700;
-}
-</style>
-</head>
-
-<body>
-
-<!-- Thumbnail -->
-<div class="thumbnail" id="thumbnail">
-    <h1>You're Invited</h1>
-    <p>Wedding Reception of</p>
-    <h1>MD Noorish Nauman<br>&<br>Sabira Farooq</h1>
-    <button onclick="openCard()">Open Invitation</button>
-</div>
-
-<!-- Card -->
-<div class="card" id="card">
-
-<div class="bismillah">
-بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
-</div>
-
-<div class="title">Reception Invitation</div>
-
-<div class="names">
-<span class="groom">MD Noorish Nauman</span>
-<div class="separator">♥</div>
-<span class="bride">Sabira Farooq</span>
-</div>
-
-<div class="section-title">Nikah</div>
-<div class="details">
-📅 30 May 2026 <br>
-📍 Srinagar <br>
-Simple Nikah Sunnat
-</div>
-
-<div class="section-title">Reception</div>
-<div class="details">
-📅 5 June 2026 <br>
-🕖 7:00 PM <br>
-📍 Alamganj, Noorani bagh, Jashn Palace, Patna
-</div>
-
-<div class="countdown" id="countdown"></div>
-
-<button class="small" onclick="toggleDua()">Show Dua</button>
-
-<div class="dua" id="duaText">
-"Barakallahu laka wa baraka alaika wa jama'a bainakuma fi khair."
-</div>
-
-</div>
-
-<script>
-function openCard(){
-    document.getElementById("thumbnail").style.display="none";
-    document.getElementById("card").style.display="block";
-}
-
-function toggleDua(){
-    const dua=document.getElementById("duaText");
-    dua.style.display = dua.style.display==="block"?"none":"block";
-}
-
-const receptionDate=new Date("June 5, 2026 19:00:00").getTime();
-
-setInterval(()=>{
-    const now=new Date().getTime();
-    const distance=receptionDate-now;
-
-    const days=Math.floor(distance/(1000*60*60*24));
-    const hours=Math.floor((distance%(1000*60*60*24))/(1000*60*60));
-    const minutes=Math.floor((distance%(1000*60*60))/(1000*60));
-    const seconds=Math.floor((distance%(1000*60))/1000);
-
-    document.getElementById("countdown").innerHTML=
-    "Reception Countdown: "+days+"d "+hours+"h "+minutes+"m "+seconds+"s";
-},1000);
-</script>
-
-</body>
+        if (isUrdu) {
+          document.getElementById("host").innerHTML =
+            "مسٹر اور مسز ایم ڈی نعمان";
+          document.getElementById("message").innerHTML =
+            "آپ کو مدعو کرتے ہیں کہ آپ ہمارے <span class='highlight'>شادی کی تقریب</span> میں شرکت کریں";
+          document.getElementById("groom").innerHTML = "ایم ڈی نورش نعمان";
+          document.getElementById("bride").innerHTML = "صبیرا فاروق";
+          document.getElementById("brideInfo").innerHTML =
+            "مرحوم شیخ فاروق کی دختر";
+          document.getElementById("receptionTitle").innerHTML = "ریسپشن";
+          document.getElementById("receptionDetails").innerHTML =
+            "📅 <span class='highlight'>5 جون 2026</span><br>🕖 <span class='highlight'>7:00 بجے شام</span><br>📍 عالم گنج <span class='highlight'>JASHAN PALACE</span>, پتنه";
+          document.getElementById("rsvpNames").innerHTML =
+            "• <span class='highlight'>شائمہ ناز</span><br>• <span class='highlight'>صداف حیات</span><br>• <span class='highlight'>مسٹر اور مسز شیخ احتشام فاروق</span>";
+          document.getElementById("bismillah").innerHTML =
+            "بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ";
+          document.getElementById("duaText").innerHTML =
+            "بارَکَ اللّٰہُ لَکَ وَ بَارَکَ عَلَیْکَ وَ جَمَعَ بَیْنَکُمَا فِی خَیْر۔";
+        } else {
+          document.getElementById("host").innerHTML = "MR & Mrs MD Nauman";
+          document.getElementById("message").innerHTML =
+            "Cordially invite you to grace the auspicious occasion of the <span class='highlight'>Wedding Reception</span>";
+          document.getElementById("groom").innerHTML = "MD Noorish Nauman";
+          document.getElementById("bride").innerHTML = "Sabira Farooq";
+          document.getElementById("brideInfo").innerHTML =
+            "D/o Late Sheikh Farooq";
+          document.getElementById("receptionTitle").innerHTML = "Reception";
+          document.getElementById("receptionDetails").innerHTML =
+            "📅 <span class='highlight'>5 June 2026</span><br>🕖 <span class='highlight'>7:00 PM</span><br>📍 Alamganj <span class='highlight'>JASHAN PALACE</span>, Patna";
+          document.getElementById("rsvpNames").innerHTML =
+            "• <span class='highlight'>Shaima Naaz</span><br>• <span class='highlight'>Sadaf Hayat</span><br>• <span class='highlight'>MR & Mrs Sheikh Ahtisham Farooq</span>";
+          document.getElementById("bismillah").innerHTML =
+            "بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ";
+          document.getElementById("duaText").innerHTML =
+            '"Barakallahu laka wa baraka alaika wa jama\'a bainakuma fi khair."';
+        }
+      }
+    </script>
+  </body>
 </html>
