@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Wedding Reception Invitation</title>
 <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
 <style>
 *{
   margin:0;
@@ -58,23 +59,30 @@ body{
 /* Names */
 
 .groom, .bride {
-  font-family: 'Alex Brush', cursive;
-  font-size: 64px;
+  font-family: 'Alex Brush', cursive; /* matches the flowing script */
+  font-size: 64px; /* large and elegant */
   font-weight: normal;
-  background: linear-gradient(135deg, #FFD700, #32CD32); /* gold to bright green */
+  line-height: 1.2;
+  background: linear-gradient(135deg, #FFD700, #32CD32); /* gold to green gradient */
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.35);
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.35); /* soft depth and shine */
   display: inline-block;
   position: relative;
   background-size: 400% 100%;
-  animation: shimmer 4s linear infinite;
+  animation: shimmer 4s linear infinite; /* optional gentle shimmer */
 }
 
 @keyframes shimmer {
   0% { background-position: 0% 0%; }
   50% { background-position: 100% 0%; }
   100% { background-position: 0% 0%; }
+}
+
+.heart {
+  font-size: 28px;
+  color: gold;
+  margin: 12px 0;
 }
 
 .heart {
